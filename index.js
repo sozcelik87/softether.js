@@ -157,7 +157,7 @@ VPNCMD.prototype.createUser = function(options, username, group) {
 }
 
 VPNCMD.prototype.setUserPassword = function(options,username,password) {
-    let command = this.getBasicCommand(options) + " /CMD UserPasswordSet" + username + " /PASSWORD:" + password
+    let command = this.getBasicCommand(options) + " /CMD UserPasswordSet " + username + " /PASSWORD:" + password
     return executeCommand(command)
 }
 
