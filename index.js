@@ -156,6 +156,11 @@ VPNCMD.prototype.createUser = function(options, username, group) {
     return executeCommand(command)
 }
 
+VPNCMD.prototype.setUserPassword = function(options,username,password) {
+    let command = this.getBasicCommand(options) + " /CMD UserPasswordSet" + username + " /PASSWORD:" + password
+    return executeCommand(command)
+}
+
 VPNCMD.prototype.setUserRadius = function(options, username) {
     var command = this.getBasicCommand(options) + " /CMD UserRadiusSet " + username + " /ALIAS:" + username
     return executeCommand(command)
